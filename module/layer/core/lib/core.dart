@@ -26,6 +26,7 @@ export 'src/extension/dynamic_extension.dart';
 export 'src/extension/iterable_extension.dart';
 export 'src/extension/map_extension.dart';
 export 'src/extension/number_extension.dart';
+export 'src/extension/string_extension.dart';
 
 // Injection
 // =============================================================================

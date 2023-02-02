@@ -5,7 +5,7 @@ class NetworkCreator {
   NetworkCreator._();
 
   static Dio create({
-    String baseUrl = '',
+    required String baseUrl,
     bool isLogger = true,
     bool checkNetwork = true,
     int sendTimeout = 0,
