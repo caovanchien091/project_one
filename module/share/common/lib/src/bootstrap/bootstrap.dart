@@ -1,5 +1,4 @@
-import 'package:common/src/register/dependency_register.dart';
-import 'package:common/src/register/route_register.dart';
+import 'package:common/common.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
