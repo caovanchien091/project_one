@@ -1,6 +1,4 @@
 extension MapExtension<K, V> on Map<K, V>? {
-  int get count => this?.length ?? 0;
-
   bool get isNullOrEmpty {
     return this != null ? this!.isEmpty : true;
   }

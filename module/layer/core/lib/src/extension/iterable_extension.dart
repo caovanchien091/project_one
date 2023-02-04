@@ -1,6 +1,4 @@
 extension IterableExtension<T> on Iterable<T>? {
-  int get count => this?.length ?? 0;
-
   bool get isNullOrEmpty {
     return this != null ? this!.isEmpty : true;
   }

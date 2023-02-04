@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
-extension TextContext on BuildContext {
+extension TextContextExtension on BuildContext {
   TextStyle? get displaySmall => textTheme.displaySmall;
 
   TextStyle? get displayMedium => textTheme.displayMedium;

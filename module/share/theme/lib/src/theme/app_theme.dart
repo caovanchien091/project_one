@@ -20,8 +20,10 @@ class AppTheme {
     }
 
     return data.copyWith(
-      textTheme: CustomTextTheme(),
       inputDecorationTheme: AppDecorationTheme(),
+      textTheme: AppTextTheme(
+        textColor: data.colorScheme.onSurface,
+      ),
     );
   }
 }

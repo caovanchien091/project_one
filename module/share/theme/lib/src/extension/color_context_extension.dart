@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
-extension ColorContext on BuildContext {
+extension ColorContextExtension on BuildContext {
   Color get primary => colorScheme.primary;
 
   Color get onPrimary => colorScheme.onPrimary;
