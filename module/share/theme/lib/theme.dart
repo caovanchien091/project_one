@@ -28,3 +28,5 @@ export 'src/extension/base_context_extension.dart';
 export 'src/extension/color_context_extension.dart';
 export 'src/extension/size_context_extension.dart';
 export 'src/extension/text_context_extension.dart';
+export 'src/extension/edge_context_extension.dart';
+export 'src/extension/text_style_extension.dart';

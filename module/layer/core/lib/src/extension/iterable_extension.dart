@@ -31,6 +31,18 @@ extension IterableExtension<T> on Iterable<T>? {
     }
   }
 
+  List<E> mapTo<E>(E Function(T item) transform) {
+    List<E> transforms = [];
+
+    for (var item in this ?? <T>[]) {
+      transforms.add(
+        transform(item),
+      );
+    }
+
+    return transforms;
+  }
+
   List<E> generate<E>({
     required E Function(int index, T value) item,
     E? Function(int index, T value)? separate,

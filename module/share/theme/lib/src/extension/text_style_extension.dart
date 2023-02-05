@@ -32,4 +32,16 @@ extension TextStyleExtension on TextStyle? {
   TextStyle? get underline => this?.copyWith(
         decoration: TextDecoration.underline,
       );
+
+  TextStyle? copyWith({
+    Color? color,
+    Color? backgroundColor,
+    TextOverflow? overflow,
+  }) {
+    return this?.copyWith(
+      color: color,
+      backgroundColor: backgroundColor,
+      overflow: overflow,
+    );
+  }
 }

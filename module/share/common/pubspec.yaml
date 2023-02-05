@@ -8,10 +8,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  # Local
   core:
     path: ../../layer/core
   domain:
     path: ../../layer/domain
+  # Pub
+  flutter_bloc: any
 
 dev_dependencies:
   flutter_lints: ^2.0.0

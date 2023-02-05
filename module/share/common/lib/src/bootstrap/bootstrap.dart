@@ -1,12 +1,11 @@
 import 'package:common/common.dart';
 import 'package:core/core.dart';
-import 'package:flutter/material.dart';
 
 abstract class Bootstrap {
   abstract List<RouteRegister> routes;
   abstract List<DependencyRegister> dependencies;
 
-  void complete(Route? Function(RouteSettings) onGenerate);
+  void complete(GenerateRoute onGenerate);
 
   void boot() async {
     AppInjection injection = AppInjection.I;

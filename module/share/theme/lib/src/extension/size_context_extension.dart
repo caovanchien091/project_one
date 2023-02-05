@@ -16,39 +16,39 @@ extension SizeContextExtension on BuildContext {
 
   double get spacingXXL => AppSpaceSize.spacingXXL;
 
-  double get displayLarge => AppTextSize.displayLarge;
+  double get sizeDisplayLarge => AppTextSize.displayLarge;
 
-  double get displayMedium => AppTextSize.displayMedium;
+  double get sizeDisplayMedium => AppTextSize.displayMedium;
 
-  double get displaySmall => AppTextSize.displaySmall;
+  double get sizeDisplaySmall => AppTextSize.displaySmall;
 
-  double get headlineLarge => AppTextSize.headlineLarge;
+  double get sizeHeadlineLarge => AppTextSize.headlineLarge;
 
-  double get headlineMedium => AppTextSize.headlineMedium;
+  double get sizeHeadlineMedium => AppTextSize.headlineMedium;
 
-  double get headlineSmall => AppTextSize.headlineSmall;
+  double get sizeHeadlineSmall => AppTextSize.headlineSmall;
 
-  double get titleLarge => AppTextSize.titleLarge;
+  double get sizeTitleLarge => AppTextSize.titleLarge;
 
-  double get titleMedium => AppTextSize.titleMedium;
+  double get sizeTitleMedium => AppTextSize.titleMedium;
 
-  double get titleSmall => AppTextSize.titleSmall;
+  double get sizeTitleSmall => AppTextSize.titleSmall;
 
-  double get priceSmall => AppTextSize.priceSmall;
+  double get sizePriceSmall => AppTextSize.priceSmall;
 
-  double get priceMedium => AppTextSize.priceMedium;
+  double get sizePriceMedium => AppTextSize.priceMedium;
 
-  double get priceLarge => AppTextSize.priceLarge;
+  double get sizePriceLarge => AppTextSize.priceLarge;
 
-  double get bodyLarge => AppTextSize.bodyLarge;
+  double get sizeBodyLarge => AppTextSize.bodyLarge;
 
-  double get bodyMedium => AppTextSize.bodyMedium;
+  double get sizeBodyMedium => AppTextSize.bodyMedium;
 
-  double get bodySmall => AppTextSize.bodySmall;
+  double get sizeBodySmall => AppTextSize.bodySmall;
 
-  double get labelLarge => AppTextSize.labelLarge;
+  double get sizeLabelLarge => AppTextSize.labelLarge;
 
-  double get labelMedium => AppTextSize.labelMedium;
+  double get sizeLabelMedium => AppTextSize.labelMedium;
 
-  double get labelSmall => AppTextSize.labelSmall;
+  double get sizeLabelSmall => AppTextSize.labelSmall;
 }
