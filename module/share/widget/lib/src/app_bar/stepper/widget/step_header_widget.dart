@@ -1,11 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:untitled1/step_bar/model/step_model.dart';
-import 'package:untitled1/step_bar/widget/step_item.dart';
-
-import '../model/step_controller.dart';
-import 'step_inherited.dart';
+import 'package:widget/widget.dart';
 
 class StepHeaderWidget extends SliverPersistentHeader {
   const StepHeaderWidget({

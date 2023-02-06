@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled1/step_bar/model/step_controller.dart';
+import 'package:widget/widget.dart';
 
 class StepInherited extends InheritedWidget {
   const StepInherited({

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled1/step_bar/model/step_status.dart';
+import 'package:widget/widget.dart';
 
 typedef StepBuilder = Widget Function(StepStatus);
 

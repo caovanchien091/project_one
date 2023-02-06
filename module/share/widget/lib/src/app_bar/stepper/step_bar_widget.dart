@@ -1,9 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:untitled1/step_bar/model/step_controller.dart';
-import 'package:untitled1/step_bar/widget/step_header_widget.dart';
-import 'package:untitled1/step_bar/widget/step_inherited.dart';
+import 'package:widget/widget.dart';
 
 class StepBarWidget extends StatelessWidget {
   const StepBarWidget({
