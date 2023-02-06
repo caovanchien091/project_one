@@ -1,4 +1,5 @@
 import 'package:common/common.dart';
+import 'package:common/src/cache/cache.dart';
 import 'package:core/core.dart';
 
 abstract class Bootstrap {
@@ -8,10 +9,12 @@ abstract class Bootstrap {
   void complete(GenerateRoute onGenerate);
 
   void boot() async {
-    AppInjection injection = AppInjection.I;
+    await Cache.init();
 
     for (var dependency in dependencies) {
-      await dependency.register(injection);
+      await dependency.register(
+        AppInjection.I,
+      );
     }
 
     complete((settings) {
@@ -19,7 +22,7 @@ abstract class Bootstrap {
         if (route.contains(settings)) {
           return route.register(
             settings,
-            injection,
+            AppInjection.I,
           );
         }
       }

@@ -3,6 +3,10 @@ R run<R>(R Function() operation) {
 }
 
 extension DynamicExtension<T> on T {
+  E? cast<E>([E? defaultValue]) {
+    return this is E ? this as E : defaultValue;
+  }
+
   R let<R>(R Function(T self) operation_for) {
     return operation_for(this);
   }

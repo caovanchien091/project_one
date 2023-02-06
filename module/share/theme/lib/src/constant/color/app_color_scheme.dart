@@ -31,8 +31,8 @@ class AppColorScheme {
         inversePrimary: Color(0xFF89D88F),
         shadow: Color(0xFF000000),
         surfaceTint: Color(0xFF1D6C30),
-        outlineVariant: Color(0xFFC2C9BE),
-        scrim: Color(0xFF000000),
+        // outlineVariant: Color(0xFFC2C9BE),
+        // scrim: Color(0xFF000000),
       );
 
   static ColorScheme get dark => const ColorScheme(
@@ -65,7 +65,7 @@ class AppColorScheme {
         inversePrimary: Color(0xFF1D6C30),
         shadow: Color(0xFF000000),
         surfaceTint: Color(0xFF89D88F),
-        outlineVariant: Color(0xFF424940),
-        scrim: Color(0xFF000000),
+        // outlineVariant: Color(0xFF424940),
+        // scrim: Color(0xFF000000),
       );
 }
