@@ -11,7 +11,7 @@ class StepInherited extends InheritedWidget {
   final StepController controller;
 
   static StepInherited of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<StepInherited>()!;
+    return context.dependOnInheritedWidgetOfExactType<StepInherited>() as StepInherited;
   }
 
   @override

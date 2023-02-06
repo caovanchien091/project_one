@@ -18,35 +18,7 @@ class StepHeaderDelegate extends SliverPersistentHeaderDelegate {
 
   final double maxSize;
   final double minSize;
-  final List<StepModel> steps = [
-    StepModel(label: 'Haha'),
-    StepModel(label: 'Haha'),
-    StepModel(label: 'Haha'),
-    StepModel(label: 'Haha'),
-    StepModel(label: 'Haha'),
-  ];
-
-  double shrinkOffset = 0;
-
   late BuildContext context;
-
-  double get bodyExtent => maxExtent - minExtent;
-
-  double get bodyExtentSafeTop => bodyExtent + screenPadding.top;
-
-  double get bodyPercent => (bodyExtent - shrinkOffset) / bodyExtent;
-
-  double get bodyPercentRevert => 1 - bodyPercent;
-
-  double get minExtendNoSafeTop => minExtent - screenPadding.top;
-
-  double get bodyHeightWithPercent => bodyExtent + (bodyExtent * -bodyPercent);
-
-  StepController get controller => StepInherited.of(context).controller;
-
-  Size get screenSize => MediaQueryData.fromWindow(window).size;
-
-  EdgeInsets get screenPadding => MediaQueryData.fromWindow(window).padding;
 
   @override
   double get maxExtent => maxSize;
@@ -60,8 +32,7 @@ class StepHeaderDelegate extends SliverPersistentHeaderDelegate {
   @override
   Widget build(context, shrinkOffset, overlapsContent) {
     this.context = context;
-    this.shrinkOffset = shrinkOffset;
-    controller.steps = steps;
+    controller.shrinkOffset = shrinkOffset;
 
     return Container(
       decoration: BoxDecoration(
@@ -86,30 +57,32 @@ class StepHeaderDelegate extends SliverPersistentHeaderDelegate {
     return Align(
       alignment: Alignment.bottomCenter,
       child: SingleChildScrollView(
+        controller: stepController,
         scrollDirection: Axis.horizontal,
         child: ConstrainedBox(
           constraints: BoxConstraints(
-            minHeight: minExtendNoSafeTop,
+            minHeight: bottomHeight,
             minWidth: screenSize.width,
           ),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: List.generate((steps.length * 2) + 1, (index) {
+            children: List.generate(stepLengthDouble, (index) {
               if (index % 2 == 0) {
                 return const SizedBox(
                   width: 16,
                   height: 16,
                 );
               } else {
-                var indexReal = (index - 1) ~/ 2;
+                var stepIndex = (index - 1) ~/ 2;
+                var step = steps[stepIndex];
 
                 return StepItem(
-                  index: indexReal,
-                  currentIndex: controller.currentIndex,
-                  totalIndex: controller.totalIndex,
-                  labelContent: steps[indexReal].label,
+                  index: stepIndex,
+                  currentIndex: currentIndex,
+                  totalIndex: stepLength,
+                  labelContent: step.label,
                 );
               }
             }),
@@ -123,9 +96,9 @@ class StepHeaderDelegate extends SliverPersistentHeaderDelegate {
     return Positioned(
       left: 0,
       right: 0,
-      top: -bodyHeightWithPercent,
+      top: positionAppbarAlign,
       child: SizedBox(
-        height: bodyExtentSafeTop,
+        height: bodyExtendWithSafe,
         child: Opacity(
           opacity: bodyPercent,
           child: AppBar(
@@ -145,8 +118,50 @@ class StepHeaderDelegate extends SliverPersistentHeaderDelegate {
         ),
         spreadRadius: 1,
         blurRadius: 1,
-        offset: const Offset(0, 3),
+        offset: const Offset(0, 1),
       ),
     ];
   }
+}
+
+extension _StepHeaderScreenSize on StepHeaderDelegate {
+  Size get screenSize => MediaQueryData.fromWindow(window).size;
+
+  EdgeInsets get screenPadding => MediaQueryData.fromWindow(window).padding;
+}
+
+extension _StepHeaderCaculator on StepHeaderDelegate {
+  int get currentIndex => controller.currentIndex;
+
+  int get stepLength => controller.steps.length;
+
+  int get stepLengthDouble => stepLength * 2 + 1;
+
+  double get shrinkOffset => controller.shrinkOffset;
+
+  double get bodyExtent => maxExtent - minExtent;
+
+  double get bodyExtendWithSafe => bodyExtent + screenPadding.top;
+
+  double get minDragOffset => minExtent;
+
+  double get maxDragOffset => maxExtent;
+
+  double get zoneDragOffset => maxDragOffset - minDragOffset;
+
+  double get currentOffset => bodyExtent - shrinkOffset;
+
+  double get bodyPercent => currentOffset / bodyExtent;
+
+  double get bodyPercentRevert => 1 - bodyPercent;
+
+  double get bottomHeight => minExtent - screenPadding.top;
+
+  double get positionAppbarAlign => -(bodyExtent + (bodyExtent * -bodyPercent));
+
+  List<StepModel> get steps => controller.steps;
+
+  StepController get controller => StepInherited.of(context).controller;
+
+  ScrollController get stepController => controller.stepController;
 }

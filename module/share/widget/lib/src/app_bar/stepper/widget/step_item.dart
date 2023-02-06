@@ -43,8 +43,19 @@ class StepItem extends StatelessWidget {
   final StepBuilder? titleBuilder;
   final StepBuilder? lineBuilder;
 
+  StepController controller(BuildContext context) {
+    return StepInherited.of(context).controller;
+  }
+
   @override
   Widget build(BuildContext context) {
+    controller(context).addListener(
+      index: index,
+      listener: (controller) {
+        print(index);
+      },
+    );
+
     return Row(
       children: [
         _buildIcon(),
