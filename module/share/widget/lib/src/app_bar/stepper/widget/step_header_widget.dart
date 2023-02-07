@@ -154,12 +154,6 @@ extension _StepHeaderCaculator on StepHeaderDelegate {
 
   double get bodyExtendWithSafe => bodyExtent + screenPadding.top;
 
-  double get minDragOffset => minExtent;
-
-  double get maxDragOffset => maxExtent;
-
-  double get zoneDragOffset => maxDragOffset - minDragOffset;
-
   double get currentOffset => bodyExtent - shrinkOffset;
 
   double get bodyPercent => currentOffset / bodyExtent;

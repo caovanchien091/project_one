@@ -27,3 +27,8 @@ export 'src/register/route_register.dart';
 // =============================================================================
 
 export 'src/router/app_page_route.dart';
+
+// Cache
+// =============================================================================
+
+export 'src/cache/cache.dart';

@@ -1,5 +1,4 @@
 import 'package:common/common.dart';
-import 'package:common/src/cache/cache.dart';
 import 'package:core/core.dart';
 
 abstract class Bootstrap {
@@ -9,7 +8,7 @@ abstract class Bootstrap {
   void complete(GenerateRoute onGenerate);
 
   void boot() async {
-    await Cache.init();
+    await Cache.I.init();
 
     for (var dependency in dependencies) {
       await dependency.register(

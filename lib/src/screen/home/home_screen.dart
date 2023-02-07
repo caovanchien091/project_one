@@ -1,3 +1,4 @@
+import 'package:common/common.dart';
 import 'package:flutter/material.dart';
 import 'package:widget/widget.dart';
 
@@ -18,61 +19,32 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return StepBarWidget(
-      controller: controller,
-      appBar: AppBar(
-        title: Text('Chienn a a a a '),
-      ),
-      icon: const Icon(
-        Icons.check,
-        color: Colors.white,
-      ),
-      iconPadding: 4,
-      steps: [
-        StepModel(
-          label: 'Haha',
-          panel: Container(
-            child: ElevatedButton(
-              child: Text("enenen"),
-              onPressed: () {
-                controller.goToNextPage();
-              },
-            ),
+    return Scaffold(
+      body: Column(
+        children: [
+          ElevatedButton(
+            child: const Text("Delete"),
+            onPressed: () {
+              Cache.I.delete("key");
+            },
           ),
-        ),
-        StepModel(
-          label: 'Haha',
-          panel: Container(),
-        ),
-        StepModel(
-          label: 'Haha',
-          panel: Container(),
-        ),
-        StepModel(
-          label: 'Haha',
-          panel: Container(),
-        ),
-        StepModel(
-          label: 'Haha',
-          panel: Container(),
-        ),
-        StepModel(
-          label: 'Haha',
-          panel: Container(),
-        ),
-        StepModel(
-          label: 'Haha',
-          panel: Container(),
-        ),
-        StepModel(
-          label: 'Haha',
-          panel: Container(),
-        ),
-        StepModel(
-          label: 'Haha',
-          panel: Container(),
-        ),
-      ],
+          ElevatedButton(
+            child: const Text("read"),
+            onPressed: () {
+              print('Bool => ${Cache.I.readBool('key')}');
+              print('Double => ${Cache.I.readDouble('key')}');
+              print('Int => ${Cache.I.readInt('key')}');
+              print('String => ${Cache.I.readString('key')}');
+            },
+          ),
+          ElevatedButton(
+            child: const Text("read"),
+            onPressed: () {
+              Cache.I.write('key', true);
+            },
+          ),
+        ],
+      ),
     );
   }
 }
