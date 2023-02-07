@@ -1,5 +1,3 @@
-import 'package:core/core.dart';
-
 R run<R>(R Function() operation) {
   return operation();
 }
