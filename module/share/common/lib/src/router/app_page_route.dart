@@ -23,22 +23,12 @@ class AppPageRoute<T> extends PageRoute<T> {
   }
 
   @override
-  Widget buildTransitions(BuildContext context, animation, secondaryAnimation, child) {
-    return Container(
-      color: Colors.blue,
-      child: SlideTransition(
-        position: Tween<Offset>(
-          begin: const Offset(-1, 0),
-          end: Offset.zero,
-        ).animate(animation),
-        child: child,
-      ),
-    );
-  }
-
-  @override
   bool get maintainState => true;
 
   @override
-  Duration get transitionDuration => const Duration(milliseconds: 500);
+  Duration get transitionDuration {
+    return const Duration(
+      milliseconds: 0,
+    );
+  }
 }
