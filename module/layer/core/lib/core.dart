@@ -1,10 +1,5 @@
 library core;
 
-// Bootstrap
-// =============================================================================
-
-
-
 // Exception
 // =============================================================================
 
@@ -23,7 +18,7 @@ export 'src/exception/parser_exception.dart';
 // =============================================================================
 
 export 'src/extension/dynamic_extension.dart';
-export 'src/extension/iterable_extension.dart';
+export 'src/extension/list_extension.dart';
 export 'src/extension/map_extension.dart';
 export 'src/extension/number_extension.dart';
 export 'src/extension/string_extension.dart';

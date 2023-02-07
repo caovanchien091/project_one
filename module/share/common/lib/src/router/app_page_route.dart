@@ -13,7 +13,7 @@ class AppPageRoute<T> extends MaterialPageRoute<T> {
 
   @override
   Widget buildContent(BuildContext context) {
-    if (blocs.isNullOrEmpty) {
+    if (blocs.isEmpty) {
       return Scaffold(
         body: super.buildContent(
           context,

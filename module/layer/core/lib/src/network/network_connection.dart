@@ -5,11 +5,9 @@ class NetworkConnection {
 
   static Future<bool> call() async {
     try {
-      final result = await InternetAddress.lookup('google.com');
-      if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
-        return true;
-      }
-      return false;
+      return await InternetAddress.lookup('google.com').then(
+        (value) => value[0].rawAddress.isNotEmpty,
+      );
     } catch (_) {
       return false;
     }

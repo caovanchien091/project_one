@@ -13,7 +13,7 @@ abstract class Bootstrap {
 
     for (var dependency in dependencies) {
       await dependency.register(
-        AppInjection.I,
+        AppInjection(),
       );
     }
 
@@ -22,7 +22,7 @@ abstract class Bootstrap {
         if (route.contains(settings)) {
           return route.register(
             settings,
-            AppInjection.I,
+            AppInjection(),
           );
         }
       }

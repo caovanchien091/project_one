@@ -1,8 +1,8 @@
 import 'package:core/core.dart';
 
-extension MapExtension<K, V> on Map<K, V>? {
-  Map<K, V> get self {
-    return this ?? {};
+extension ListExtension<E> on List<E>? {
+  List<E> get self {
+    return this ?? [];
   }
 
   int get length {
@@ -17,9 +17,9 @@ extension MapExtension<K, V> on Map<K, V>? {
     return this == null ? false : length != 0;
   }
 
-  List<R> mapTo<R>(SingleParam<R, MapEntry<K, V>> transform) {
+  List<R> mapTo<R>(SingleParam<R, E> transform) {
     List<R> items = [];
-    for (var item in self.entries) {
+    for (var item in this ?? []) {
       items.add(transform(item));
     }
     return items;

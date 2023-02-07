@@ -1,10 +1,10 @@
 extension StringExtension on String? {
-  bool get isNullOrEmpty {
-    return this != null ? this!.isEmpty : true;
+  bool get isEmpty {
+    return this != null ? this == '' : true;
   }
 
-  bool get isNotNullOrEmpty {
-    return this != null ? this!.isNotEmpty : false;
+  bool get isNotEmpty {
+    return this != null ? this != '' : false;
   }
 
   bool get isLowerCase {

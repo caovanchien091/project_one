@@ -138,3 +138,19 @@ extension _StepBarCaculator on _StepBarWidgetState {
 
   PageController get panelController => widget.controller.panelController;
 }
+
+class EducativeIntro {
+
+  // Defining call method
+  String call(String a, String b, String c) => 'Welcome to $a$b$c';
+}
+
+// Main Function
+void main() {
+  EducativeIntro educative_input = EducativeIntro();
+
+  // Calling the class through its instance
+  var educative_output = educative_input('our ', 'Dart ', 'tutorial');
+
+  print(educative_output);
+}
