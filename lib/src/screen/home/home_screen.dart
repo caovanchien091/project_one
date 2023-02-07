@@ -11,13 +11,47 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  var controller = StepController(
+    panelController: PageController(),
+    stepController: ScrollController(),
+  );
+
   @override
   Widget build(BuildContext context) {
-    var controller = StepController();
-
     return StepBarWidget(
       controller: controller,
+      appBar: AppBar(
+        title: Text('Chienn a a a a '),
+      ),
+      icon: const Icon(
+        Icons.check,
+        color: Colors.white,
+      ),
+      iconPadding: 4,
       steps: [
+        StepModel(
+          label: 'Haha',
+          panel: Container(
+            child: ElevatedButton(
+              child: Text("enenen"),
+              onPressed: () {
+                controller.goToNextPage();
+              },
+            ),
+          ),
+        ),
+        StepModel(
+          label: 'Haha',
+          panel: Container(),
+        ),
+        StepModel(
+          label: 'Haha',
+          panel: Container(),
+        ),
+        StepModel(
+          label: 'Haha',
+          panel: Container(),
+        ),
         StepModel(
           label: 'Haha',
           panel: Container(),
@@ -39,14 +73,6 @@ class _HomeScreenState extends State<HomeScreen> {
           panel: Container(),
         ),
       ],
-      child: Center(
-        child: ElevatedButton(
-          child: Text("enenen"),
-          onPressed: () {
-            controller.listeners[4]?.call(controller.stepController);
-          },
-        ),
-      ),
     );
   }
 }

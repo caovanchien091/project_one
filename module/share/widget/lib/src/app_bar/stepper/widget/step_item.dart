@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:widget/widget.dart';
 
-typedef StepBuilder = Widget Function(StepStatus);
+
 
 class StepItem extends StatelessWidget {
   const StepItem({
@@ -10,24 +10,26 @@ class StepItem extends StatelessWidget {
     this.iconBuilder,
     this.titleBuilder,
     this.lineBuilder,
-    required this.index,
+    required this.step,
     required this.currentIndex,
+    required this.index,
     required this.totalIndex,
     required this.labelContent,
-    this.completeColor = Colors.blue,
-    this.selectedColor = Colors.blue,
-    this.remainColor = Colors.grey,
-    this.labelStyle = const TextStyle(),
-    this.lineWidth = 32,
-    this.lineThickness = 1,
-    this.iconSize = 24,
-    this.iconPadding = 0,
-    this.space = 8,
+    required this.completeColor,
+    required this.selectedColor,
+    required this.remainColor,
+    required this.labelStyle,
+    required this.lineWidth,
+    required this.lineThickness,
+    required this.iconSize,
+    required this.iconPadding,
+    required this.space,
   }) : super(key: key);
 
+  final StepModel step;
   final int index;
-  final int currentIndex;
   final int totalIndex;
+  final int currentIndex;
   final Color completeColor;
   final Color selectedColor;
   final Color remainColor;
@@ -43,18 +45,21 @@ class StepItem extends StatelessWidget {
   final StepBuilder? titleBuilder;
   final StepBuilder? lineBuilder;
 
-  StepController controller(BuildContext context) {
-    return StepInherited.of(context).controller;
-  }
-
   @override
   Widget build(BuildContext context) {
-    controller(context).addListener(
-      index: index,
-      listener: (controller) {
-        print(index);
-      },
-    );
+    step.listener = (controller) {
+      var renderBox = findRender(context);
+      if (renderBox != null) {
+        controller.position.ensureVisible(
+          renderBox,
+          alignment: 0.5,
+          curve: Curves.ease,
+          duration: const Duration(
+            milliseconds: 200,
+          ),
+        );
+      }
+    };
 
     return Row(
       children: [
@@ -99,7 +104,16 @@ class StepItem extends StatelessWidget {
       ),
       child: FittedBox(
         fit: BoxFit.fill,
-        child: icon,
+        child: AnimatedSwitcher(
+          duration: const Duration(
+            milliseconds: 200,
+          ),
+          child: status(
+            onSelect: null,
+            onRemain: null,
+            onComplete: icon,
+          ),
+        ),
       ),
     );
   }
@@ -169,5 +183,9 @@ class StepItem extends StatelessWidget {
     }
 
     return onRemain;
+  }
+
+  RenderBox? findRender(BuildContext context) {
+    return context.findRenderObject() as RenderBox?;
   }
 }

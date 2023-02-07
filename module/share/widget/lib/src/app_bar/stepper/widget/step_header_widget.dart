@@ -36,7 +36,7 @@ class StepHeaderDelegate extends SliverPersistentHeaderDelegate {
 
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: parentData.backgroundColor,
         boxShadow: bottomShadow(),
       ),
       child: Stack(
@@ -71,18 +71,32 @@ class StepHeaderDelegate extends SliverPersistentHeaderDelegate {
             children: List.generate(stepLengthDouble, (index) {
               if (index % 2 == 0) {
                 return const SizedBox(
-                  width: 16,
-                  height: 16,
+                  width: 8,
+                  height: 8,
                 );
               } else {
                 var stepIndex = (index - 1) ~/ 2;
                 var step = steps[stepIndex];
 
                 return StepItem(
-                  index: stepIndex,
+                  step: step,
                   currentIndex: currentIndex,
+                  index: stepIndex,
                   totalIndex: stepLength,
                   labelContent: step.label,
+                  icon: step.icon ?? parentData.icon,
+                  iconBuilder: parentData.iconBuilder,
+                  titleBuilder: parentData.titleBuilder,
+                  lineBuilder: parentData.lineBuilder,
+                  completeColor: parentData.completeColor,
+                  selectedColor: parentData.selectedColor,
+                  remainColor: parentData.remainColor,
+                  labelStyle: step.labelStyle ?? parentData.labelStyle,
+                  lineWidth: parentData.lineWidth,
+                  lineThickness: parentData.lineThickness,
+                  iconSize: parentData.iconSize,
+                  iconPadding: parentData.iconPadding,
+                  space: parentData.space,
                 );
               }
             }),
@@ -101,10 +115,7 @@ class StepHeaderDelegate extends SliverPersistentHeaderDelegate {
         height: bodyExtendWithSafe,
         child: Opacity(
           opacity: bodyPercent,
-          child: AppBar(
-            title: const Text("Chien"),
-            centerTitle: true,
-          ),
+          child: parentData.appBar,
         ),
       ),
     );
@@ -160,6 +171,8 @@ extension _StepHeaderCaculator on StepHeaderDelegate {
   double get positionAppbarAlign => -(bodyExtent + (bodyExtent * -bodyPercent));
 
   List<StepModel> get steps => controller.steps;
+
+  StepInherited get parentData => StepInherited.of(context);
 
   StepController get controller => StepInherited.of(context).controller;
 
