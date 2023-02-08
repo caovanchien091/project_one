@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
-class AppEdgeInset {
+class AppEdgeInsets {
   static EdgeInsets get topXXS => EdgeInsets.only(
         top: AppSpaceSize.spacingXXS,
       );

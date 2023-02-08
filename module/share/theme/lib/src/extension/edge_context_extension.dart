@@ -2,87 +2,87 @@ import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
 extension EdgeContextExtension on BuildContext {
-  EdgeInsets get topXXS => AppEdgeInset.topXXS;
+  EdgeInsets get edgeInsetsTopXXS => AppEdgeInsets.topXXS;
 
-  EdgeInsets get topXS => AppEdgeInset.topXS;
+  EdgeInsets get edgeInsetsTopXS => AppEdgeInsets.topXS;
 
-  EdgeInsets get topS => AppEdgeInset.topS;
+  EdgeInsets get edgeInsetsTopS => AppEdgeInsets.topS;
 
-  EdgeInsets get top => AppEdgeInset.top;
+  EdgeInsets get edgeInsetsTop => AppEdgeInsets.top;
 
-  EdgeInsets get topL => AppEdgeInset.topL;
+  EdgeInsets get edgeInsetsTopL => AppEdgeInsets.topL;
 
-  EdgeInsets get topXL => AppEdgeInset.topXL;
+  EdgeInsets get edgeInsetsTopXL => AppEdgeInsets.topXL;
 
-  EdgeInsets get topXXL => AppEdgeInset.topXXL;
+  EdgeInsets get edgeInsetsTopXXL => AppEdgeInsets.topXXL;
 
-  EdgeInsets get bottomXXS => AppEdgeInset.bottomXXS;
+  EdgeInsets get edgeInsetsBottomXXS => AppEdgeInsets.bottomXXS;
 
-  EdgeInsets get bottomXS => AppEdgeInset.bottomXS;
+  EdgeInsets get edgeInsetsBottomXS => AppEdgeInsets.bottomXS;
 
-  EdgeInsets get bottomS => AppEdgeInset.bottomS;
+  EdgeInsets get edgeInsetsBottomS => AppEdgeInsets.bottomS;
 
-  EdgeInsets get bottom => AppEdgeInset.bottom;
+  EdgeInsets get edgeInsetsBottom => AppEdgeInsets.bottom;
 
-  EdgeInsets get bottomL => AppEdgeInset.bottomL;
+  EdgeInsets get edgeInsetsBottomL => AppEdgeInsets.bottomL;
 
-  EdgeInsets get bottomXL => AppEdgeInset.bottomXL;
+  EdgeInsets get edgeInsetsBottomXL => AppEdgeInsets.bottomXL;
 
-  EdgeInsets get bottomXXL => AppEdgeInset.bottomXXL;
+  EdgeInsets get edgeInsetsBottomXXL => AppEdgeInsets.bottomXXL;
 
-  EdgeInsets get leftXXS => AppEdgeInset.leftXXS;
+  EdgeInsets get edgeInsetsLeftXXS => AppEdgeInsets.leftXXS;
 
-  EdgeInsets get leftXS => AppEdgeInset.leftXS;
+  EdgeInsets get edgeInsetsLeftXS => AppEdgeInsets.leftXS;
 
-  EdgeInsets get leftS => AppEdgeInset.leftS;
+  EdgeInsets get edgeInsetsLeftS => AppEdgeInsets.leftS;
 
-  EdgeInsets get left => AppEdgeInset.left;
+  EdgeInsets get edgeInsetsLeft => AppEdgeInsets.left;
 
-  EdgeInsets get leftL => AppEdgeInset.leftL;
+  EdgeInsets get edgeInsetsLeftL => AppEdgeInsets.leftL;
 
-  EdgeInsets get leftXL => AppEdgeInset.leftXL;
+  EdgeInsets get edgeInsetsLeftXL => AppEdgeInsets.leftXL;
 
-  EdgeInsets get leftXXL => AppEdgeInset.leftXXL;
+  EdgeInsets get edgeInsetsLeftXXL => AppEdgeInsets.leftXXL;
 
-  EdgeInsets get rightXXS => AppEdgeInset.rightXXS;
+  EdgeInsets get edgeInsetsRightXXS => AppEdgeInsets.rightXXS;
 
-  EdgeInsets get rightXS => AppEdgeInset.rightXS;
+  EdgeInsets get edgeInsetsRightXS => AppEdgeInsets.rightXS;
 
-  EdgeInsets get rightS => AppEdgeInset.rightS;
+  EdgeInsets get edgeInsetsRightS => AppEdgeInsets.rightS;
 
-  EdgeInsets get right => AppEdgeInset.right;
+  EdgeInsets get edgeInsetsRight => AppEdgeInsets.right;
 
-  EdgeInsets get rightL => AppEdgeInset.rightL;
+  EdgeInsets get edgeInsetsRightL => AppEdgeInsets.rightL;
 
-  EdgeInsets get rightXL => AppEdgeInset.rightXL;
+  EdgeInsets get edgeInsetsRightXL => AppEdgeInsets.rightXL;
 
-  EdgeInsets get rightXXL => AppEdgeInset.rightXXL;
+  EdgeInsets get edgeInsetsRightXXL => AppEdgeInsets.rightXXL;
 
-  EdgeInsets get horizontalXXS => AppEdgeInset.horizontalXXS;
+  EdgeInsets get edgeInsetsHorizontalXXS => AppEdgeInsets.horizontalXXS;
 
-  EdgeInsets get horizontalXS => AppEdgeInset.horizontalXS;
+  EdgeInsets get edgeInsetsHorizontalXS => AppEdgeInsets.horizontalXS;
 
-  EdgeInsets get horizontalS => AppEdgeInset.horizontalS;
+  EdgeInsets get edgeInsetsHorizontalS => AppEdgeInsets.horizontalS;
 
-  EdgeInsets get horizontal => AppEdgeInset.horizontal;
+  EdgeInsets get edgeInsetsHorizontal => AppEdgeInsets.horizontal;
 
-  EdgeInsets get horizontalL => AppEdgeInset.horizontalL;
+  EdgeInsets get edgeInsetsHorizontalL => AppEdgeInsets.horizontalL;
 
-  EdgeInsets get horizontalXL => AppEdgeInset.horizontalXL;
+  EdgeInsets get edgeInsetsHorizontalXL => AppEdgeInsets.horizontalXL;
 
-  EdgeInsets get horizontalXXL => AppEdgeInset.horizontalXXL;
+  EdgeInsets get edgeInsetsHorizontalXXL => AppEdgeInsets.horizontalXXL;
 
-  EdgeInsets get verticalXXS => AppEdgeInset.verticalXXS;
+  EdgeInsets get edgeInsetsVerticalXXS => AppEdgeInsets.verticalXXS;
 
-  EdgeInsets get verticalXS => AppEdgeInset.verticalXS;
+  EdgeInsets get edgeInsetsVerticalXS => AppEdgeInsets.verticalXS;
 
-  EdgeInsets get verticalS => AppEdgeInset.verticalS;
+  EdgeInsets get edgeInsetsVerticalS => AppEdgeInsets.verticalS;
 
-  EdgeInsets get vertical => AppEdgeInset.vertical;
+  EdgeInsets get edgeInsetsVertical => AppEdgeInsets.vertical;
 
-  EdgeInsets get verticalL => AppEdgeInset.verticalL;
+  EdgeInsets get edgeInsetsVerticalL => AppEdgeInsets.verticalL;
 
-  EdgeInsets get verticalXL => AppEdgeInset.verticalXL;
+  EdgeInsets get edgeInsetsVerticalXL => AppEdgeInsets.verticalXL;
 
-  EdgeInsets get verticalXXL => AppEdgeInset.verticalXXL;
+  EdgeInsets get edgeInsetsVerticalXXL => AppEdgeInsets.verticalXXL;
 }

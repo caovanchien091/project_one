@@ -6,7 +6,7 @@ library theme;
 export 'src/constant/color/app_color_scheme.dart';
 export 'src/constant/size/app_space_size.dart';
 export 'src/constant/size/app_text_size.dart';
-export 'src/constant/edge/app_edge_inset.dart';
+export 'src/constant/edge/app_edge_insets.dart';
 
 // Themes
 // =============================================================================

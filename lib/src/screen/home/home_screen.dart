@@ -1,5 +1,8 @@
+import 'dart:math';
+
 import 'package:common/common.dart';
 import 'package:flutter/material.dart';
+import 'package:theme/theme.dart';
 import 'package:widget/widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,52 +19,38 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Row(
-          children: [AvatarCircle()],
-        ),
+        child: CircleLoading(),
       ),
     );
   }
 }
 
-class AvatarCircle extends StatelessWidget {
-  final double size;
-
-  const AvatarCircle({
+class CircleLoading extends StatefulWidget {
+  const CircleLoading({
     Key? key,
-    this.size = 64,
   }) : super(key: key);
 
   @override
+  State<CircleLoading> createState() => _CircleLoadingState();
+}
+
+class _CircleLoadingState extends State<CircleLoading> with TickerProviderStateMixin {
+  @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          width: size,
-          height: size,
-          decoration: const BoxDecoration(
-            shape: BoxShape.circle,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey,
-                blurRadius: 3,
-              )
-            ],
-          ),
-        ),
-        Container(
-          width: size,
-          height: size,
-          clipBehavior: Clip.hardEdge,
-          decoration: const BoxDecoration(
-            shape: BoxShape.circle,
-          ),
-          child: Image.network(
-            '',
-            fit: BoxFit.fitWidth,
-          ),
-        ),
-      ],
+    return CustomPaint(
+      painter: CustomPan(),
     );
   }
+}
+
+class CustomPan extends CustomPainter {
+
+
+  @override
+  void paint(Canvas canvas, Size size) {
+
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPan oldDelegate) => true;
 }
