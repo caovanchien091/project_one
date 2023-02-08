@@ -7,21 +7,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # Local
-  core:
-    path: module/layer/core
+
   domain:
-    path: module/layer/domain
+    path: module/domain
   common:
-    path: module/share/common
+    path: module/common
   content:
-    path: module/share/content
+    path: module/content
   theme:
-    path: module/share/theme
+    path: module/theme
   widget:
-    path: module/share/widget
-  # Pub
-  flutter_bloc: any
+    path: module/widget
 
 dev_dependencies:
   flutter_lints: ^2.0.0

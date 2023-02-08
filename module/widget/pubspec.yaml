@@ -1,0 +1,21 @@
+name: widget
+publish_to: none
+
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  domain:
+    path: ../domain
+  common:
+    path: ../common
+  content:
+    path: ../content
+  theme:
+    path: ../theme
+
+dev_dependencies:
+  flutter_lints: ^2.0.0

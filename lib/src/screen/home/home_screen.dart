@@ -1,9 +1,4 @@
-import 'dart:math';
-
-import 'package:common/common.dart';
 import 'package:flutter/material.dart';
-import 'package:theme/theme.dart';
-import 'package:widget/widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -17,7 +12,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: CircleLoading(),
       ),
