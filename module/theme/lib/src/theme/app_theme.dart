@@ -10,11 +10,15 @@ class AppTheme {
     ThemeData data;
 
     if (isDark) {
-      data = ThemeData.dark(useMaterial3: true).copyWith(
+      data = ThemeData(
+        useMaterial3: true,
+        brightness: Brightness.dark,
         colorScheme: AppColorScheme.dark,
       );
     } else {
-      data = ThemeData.light(useMaterial3: true).copyWith(
+      data = ThemeData(
+        useMaterial3: true,
+        brightness: Brightness.light,
         colorScheme: AppColorScheme.light,
       );
     }

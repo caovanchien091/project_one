@@ -3,7 +3,6 @@ library common;
 // Constant
 // =============================================================================
 
-export 'src/constant/screen_size.dart';
 export 'src/constant/function_define.dart';
 
 // Bootstrap

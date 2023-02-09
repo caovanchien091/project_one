@@ -1,3 +1,6 @@
+import 'dart:ui';
+
+import 'package:common/common.dart';
 import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
@@ -8,106 +11,111 @@ class AppTextTheme extends TextTheme {
     required this.textColor,
   });
 
+  TextStyle get defaultTextStyle => const TextStyle(
+        package: 'theme',
+        fontFamily: 'InterFont',
+      );
+
   @override
-  TextStyle? get displayLarge => const TextStyle().copyWith(
+  TextStyle? get displayLarge => defaultTextStyle.copyWith(
         fontSize: AppTextSize.displayLarge,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
-  TextStyle? get displayMedium => const TextStyle().copyWith(
+  TextStyle? get displayMedium => defaultTextStyle.copyWith(
         fontSize: AppTextSize.displayMedium,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
-  TextStyle? get displaySmall => const TextStyle().copyWith(
+  TextStyle? get displaySmall => defaultTextStyle.copyWith(
         fontSize: AppTextSize.displaySmall,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
-  TextStyle? get headlineLarge => const TextStyle().copyWith(
+  TextStyle? get headlineLarge => defaultTextStyle.copyWith(
         fontSize: AppTextSize.headlineLarge,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
-  TextStyle? get headlineMedium => const TextStyle().copyWith(
+  TextStyle? get headlineMedium => defaultTextStyle.copyWith(
         fontSize: AppTextSize.headlineMedium,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
-  TextStyle? get headlineSmall => const TextStyle().copyWith(
+  TextStyle? get headlineSmall => defaultTextStyle.copyWith(
         fontSize: AppTextSize.headlineSmall,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
-  TextStyle? get titleLarge => const TextStyle().copyWith(
+  TextStyle? get titleLarge => defaultTextStyle.copyWith(
         fontSize: AppTextSize.titleLarge,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
-  TextStyle? get titleMedium => const TextStyle().copyWith(
+  TextStyle? get titleMedium => defaultTextStyle.copyWith(
         fontSize: AppTextSize.titleMedium,
         fontWeight: FontWeight.w500,
         color: textColor,
       );
 
   @override
-  TextStyle? get titleSmall => const TextStyle().copyWith(
+  TextStyle? get titleSmall => defaultTextStyle.copyWith(
         fontSize: AppTextSize.titleSmall,
         fontWeight: FontWeight.w500,
         color: textColor,
       );
 
   @override
-  TextStyle? get bodyLarge => const TextStyle().copyWith(
+  TextStyle? get bodyLarge => defaultTextStyle.copyWith(
         fontSize: AppTextSize.bodyLarge,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
-  TextStyle? get bodyMedium => const TextStyle().copyWith(
+  TextStyle? get bodyMedium => defaultTextStyle.copyWith(
         fontSize: AppTextSize.bodyMedium,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
-  TextStyle? get bodySmall => const TextStyle().copyWith(
+  TextStyle? get bodySmall => defaultTextStyle.copyWith(
         fontSize: AppTextSize.bodySmall,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
-  TextStyle? get labelLarge => const TextStyle().copyWith(
+  TextStyle? get labelLarge => defaultTextStyle.copyWith(
         fontSize: AppTextSize.labelLarge,
         fontWeight: FontWeight.w500,
         color: textColor,
       );
 
   @override
-  TextStyle? get labelMedium => const TextStyle().copyWith(
+  TextStyle? get labelMedium => defaultTextStyle.copyWith(
         fontSize: AppTextSize.labelMedium,
         fontWeight: FontWeight.w500,
         color: textColor,
       );
 
   @override
-  TextStyle? get labelSmall => const TextStyle().copyWith(
+  TextStyle? get labelSmall => defaultTextStyle.copyWith(
         fontSize: AppTextSize.labelSmall,
         fontWeight: FontWeight.w500,
         color: textColor,

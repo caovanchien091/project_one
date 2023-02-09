@@ -113,7 +113,7 @@ class CircleAvatarCustom extends StatelessWidget {
       alignment: Alignment.center,
       child: Text(
         firstCharName(),
-        style: context.titleLarge.bold.copyWith(
+        style: context.titleLarge.bold.apply(
           color: context.onSurfaceColor,
         ),
       ),

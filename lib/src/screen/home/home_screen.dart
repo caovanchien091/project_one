@@ -1,4 +1,8 @@
+import 'dart:math';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:theme/theme.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -32,20 +36,23 @@ class CircleLoading extends StatefulWidget {
 class _CircleLoadingState extends State<CircleLoading> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    return CustomPaint(
-      painter: CustomPan(),
+    return Scaffold(
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AppIcon(
+              size: 100,
+              iconData: Icons.add,
+              color: Colors.blue,
+              background: Colors.yellow,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
 
-class CustomPan extends CustomPainter {
 
-
-  @override
-  void paint(Canvas canvas, Size size) {
-
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPan oldDelegate) => true;
-}
