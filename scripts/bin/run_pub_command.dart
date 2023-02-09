@@ -10,7 +10,7 @@ void main() async {
 }
 
 String get currentPath {
-  return Directory.current.path;
+  return Directory.current.path.replaceAll('/scripts', '');
 }
 
 String get modulePath {
