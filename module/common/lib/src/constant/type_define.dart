@@ -1,0 +1,1 @@
+typedef NetworkMap<T> = Map<String, T>;

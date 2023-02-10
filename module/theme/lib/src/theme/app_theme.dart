@@ -13,18 +13,18 @@ class AppTheme {
       data = ThemeData(
         useMaterial3: true,
         brightness: Brightness.dark,
-        colorScheme: AppColorScheme.dark,
+        colorScheme: ColorSchemes.dark,
       );
     } else {
       data = ThemeData(
         useMaterial3: true,
         brightness: Brightness.light,
-        colorScheme: AppColorScheme.light,
+        colorScheme: ColorSchemes.light,
       );
     }
 
     return data.copyWith(
-      inputDecorationTheme: AppDecorationTheme(),
+      inputDecorationTheme: TextDecorationTheme(),
       textTheme: AppTextTheme(
         textColor: data.colorScheme.onSurface,
       ),

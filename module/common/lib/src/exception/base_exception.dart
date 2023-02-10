@@ -1,8 +1,8 @@
-class AppException implements Exception {
+class BaseException implements Exception {
   final int? code;
   final dynamic error;
 
-  const AppException([
+  const BaseException([
     this.code,
     this.error,
   ]);

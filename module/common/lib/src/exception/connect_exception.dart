@@ -1,6 +1,6 @@
 import 'package:common/common.dart';
 
-class ConnectException extends AppException {
+class ConnectException extends BaseException {
   const ConnectException([
     int? code,
     dynamic error,

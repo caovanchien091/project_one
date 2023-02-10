@@ -18,105 +18,105 @@ class AppTextTheme extends TextTheme {
 
   @override
   TextStyle? get displayLarge => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.displayLarge,
+        fontSize: TextSize.displayLarge,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
   TextStyle? get displayMedium => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.displayMedium,
+        fontSize: TextSize.displayMedium,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
   TextStyle? get displaySmall => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.displaySmall,
+        fontSize: TextSize.displaySmall,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
   TextStyle? get headlineLarge => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.headlineLarge,
+        fontSize: TextSize.headlineLarge,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
   TextStyle? get headlineMedium => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.headlineMedium,
+        fontSize: TextSize.headlineMedium,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
   TextStyle? get headlineSmall => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.headlineSmall,
+        fontSize: TextSize.headlineSmall,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
   TextStyle? get titleLarge => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.titleLarge,
+        fontSize: TextSize.titleLarge,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
   TextStyle? get titleMedium => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.titleMedium,
+        fontSize: TextSize.titleMedium,
         fontWeight: FontWeight.w500,
         color: textColor,
       );
 
   @override
   TextStyle? get titleSmall => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.titleSmall,
+        fontSize: TextSize.titleSmall,
         fontWeight: FontWeight.w500,
         color: textColor,
       );
 
   @override
   TextStyle? get bodyLarge => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.bodyLarge,
+        fontSize: TextSize.bodyLarge,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
   TextStyle? get bodyMedium => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.bodyMedium,
+        fontSize: TextSize.bodyMedium,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
   TextStyle? get bodySmall => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.bodySmall,
+        fontSize: TextSize.bodySmall,
         fontWeight: FontWeight.w400,
         color: textColor,
       );
 
   @override
   TextStyle? get labelLarge => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.labelLarge,
+        fontSize: TextSize.labelLarge,
         fontWeight: FontWeight.w500,
         color: textColor,
       );
 
   @override
   TextStyle? get labelMedium => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.labelMedium,
+        fontSize: TextSize.labelMedium,
         fontWeight: FontWeight.w500,
         color: textColor,
       );
 
   @override
   TextStyle? get labelSmall => defaultTextStyle.copyWith(
-        fontSize: AppTextSize.labelSmall,
+        fontSize: TextSize.labelSmall,
         fontWeight: FontWeight.w500,
         color: textColor,
       );

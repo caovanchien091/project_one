@@ -11,7 +11,7 @@ class NetworkCreator {
     int connectTimeout = 0,
     int receiveTimeout = 0,
     Map<String, String>? headers,
-    List<Interceptor>? extraInterceptors,
+    List<Interceptor>? interceptors,
   }) {
     Dio dio = Dio();
 
@@ -23,7 +23,7 @@ class NetworkCreator {
 
     dio.interceptors.addAll([
       if (checkNetwork) NetworkInterceptor(),
-      if (extraInterceptors != null) ...extraInterceptors,
+      if (interceptors != null) ...interceptors,
       if (isLogger)
         LoggerInterceptor(
           logPrint: print,

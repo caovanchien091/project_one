@@ -1,6 +1,8 @@
 import 'package:common/common.dart';
 
-class AppInjection {
+class Injection {
+  static final Injection I = Injection();
+
   T get<T extends Object>({
     String? instanceName,
     dynamic param1,

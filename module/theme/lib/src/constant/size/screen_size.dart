@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class AppScreenSize {
-  AppScreenSize._();
+class ScreenSize {
+  ScreenSize._();
 
   static MediaQueryData get mediaQueryData {
     return MediaQueryData.fromWindow(window);

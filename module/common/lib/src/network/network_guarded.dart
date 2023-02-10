@@ -5,7 +5,7 @@ import 'package:common/common.dart';
 Future<NetworkResponse<T>> runNetworkGuarded<T>(
   Future<T> Function() run,
 ) async {
-  AppException exception;
+  BaseException exception;
 
   try {
     return ResponseSuccess(
@@ -20,7 +20,7 @@ Future<NetworkResponse<T>> runNetworkGuarded<T>(
       exception = const NetworkException();
     }
   } catch (_) {
-    exception = const AppException();
+    exception = const BaseException();
   }
 
   return ResponseFailure(

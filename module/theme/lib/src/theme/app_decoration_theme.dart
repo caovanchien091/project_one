@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
-class AppDecorationTheme extends InputDecorationTheme {
+class TextDecorationTheme extends InputDecorationTheme {
 
 }

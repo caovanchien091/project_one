@@ -2,7 +2,7 @@ import 'package:common/common.dart';
 
 class NetworkResponse<TResponse> {
   final TResponse? response;
-  final AppException? exception;
+  final BaseException? exception;
 
   const NetworkResponse._(
     this.response,
@@ -15,12 +15,12 @@ class NetworkResponse<TResponse> {
 
   TResult fold<TResult>({
     required TResult Function(TResponse response) onSuccess,
-    required TResult Function(AppException exception) onFailure,
+    required TResult Function(BaseException exception) onFailure,
   }) {
     if (isSuccess) {
       return onSuccess(response as TResponse);
     } else {
-      return onFailure(exception as AppException);
+      return onFailure(exception as BaseException);
     }
   }
 }
@@ -33,6 +33,6 @@ class ResponseSuccess<TResponse> extends NetworkResponse<TResponse> {
 
 class ResponseFailure<TResponse> extends NetworkResponse<TResponse> {
   const ResponseFailure({
-    required AppException exception,
+    required BaseException exception,
   }) : super._(null, exception);
 }
