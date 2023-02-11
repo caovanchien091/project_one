@@ -58,6 +58,13 @@ export 'src/network/network_client.dart';
 // Share
 // =============================================================================
 
+export 'src/route/custom_route/page_route_custom.dart';
+export 'src/route/custom_route/page_route_inherited.dart';
+export 'src/route/custom_route/page_route_model.dart';
+
+// Share
+// =============================================================================
+
 export 'src/share/flutter_bloc.dart';
 export 'src/share/hive.dart';
 export 'src/share/get_it.dart';

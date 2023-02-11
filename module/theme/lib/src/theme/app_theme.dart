@@ -24,9 +24,11 @@ class AppTheme {
     }
 
     return data.copyWith(
-      inputDecorationTheme: TextDecorationTheme(),
       textTheme: AppTextTheme(
-        textColor: data.colorScheme.onSurface,
+        colorScheme: data.colorScheme,
+      ),
+      inputDecorationTheme: AppInputDecorationTheme(
+        colorScheme: data.colorScheme,
       ),
     );
   }

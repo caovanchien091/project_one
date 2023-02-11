@@ -1,4 +1,5 @@
 import 'package:common/common.dart';
+import 'package:project_one/src/screen/error/not_found_screen.dart';
 import 'package:widget/widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:project_one/src/register/app_dependency.dart';
@@ -18,11 +19,20 @@ class AppBootstrap extends Bootstrap {
   ];
 
   @override
-  void complete(GenerateRoute onGenerate) {
+  void complete(String initRoute, GenerateRoute onGenerate) {
     runApp(
       Application(
-        initRoute: AppRoute.homeScreen,
+        initRoute: initRoute,
         onGenerateRoute: onGenerate,
+        onUnknownRoute: (settings) {
+          return PageRouteCustom(
+            blocs: [],
+            settings: settings,
+            child: NotFoundScreen(
+              settings: settings,
+            ),
+          );
+        },
       ),
     );
   }

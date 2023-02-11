@@ -4,9 +4,9 @@ abstract class Bootstrap {
   abstract List<RouteRegister> routes;
   abstract List<DependencyRegister> dependencies;
 
-  void complete(GenerateRoute onGenerate);
+  void complete(String initRoute, GenerateRoute onGenerate);
 
-  void boot() async {
+  void boot({required InitRoute initRoute}) async {
     await Cache.I.init();
 
     for (var dependency in dependencies) {
@@ -15,7 +15,7 @@ abstract class Bootstrap {
       );
     }
 
-    complete((settings) {
+    complete(initRoute(Injection.I), (settings) {
       for (var route in routes) {
         if (route.contains(settings)) {
           return route.register(
