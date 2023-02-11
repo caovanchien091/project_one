@@ -1,7 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
-extension ScreenSizeContextExtension on BuildContext {
+extension SpaceSizeExtension on BuildContext {
+  double get spacingXXS => SpaceSize.spacingXXS;
+
+  double get spacingXS => SpaceSize.spacingXS;
+
+  double get spacingS => SpaceSize.spacingS;
+
+  double get spacing => SpaceSize.spacing;
+
+  double get spacingL => SpaceSize.spacingL;
+
+  double get spacingXL => SpaceSize.spacingXL;
+
+  double get spacingXXL => SpaceSize.spacingXXL;
+}
+
+extension ScreenSizeExtension on BuildContext {
   EdgeInsets get padding => ScreenSize.padding;
 
   double get paddingTop => ScreenSize.paddingTop;

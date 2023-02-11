@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:theme/src/constant/color/color_customs.dart';
 import 'package:theme/theme.dart';
 
 class AppTheme {
@@ -14,12 +15,18 @@ class AppTheme {
         useMaterial3: true,
         brightness: Brightness.dark,
         colorScheme: ColorSchemes.dark,
+        extensions: [
+          ColorCustoms.dark,
+        ],
       );
     } else {
       data = ThemeData(
         useMaterial3: true,
         brightness: Brightness.light,
         colorScheme: ColorSchemes.light,
+        extensions: [
+          ColorCustoms.light,
+        ],
       );
     }
 

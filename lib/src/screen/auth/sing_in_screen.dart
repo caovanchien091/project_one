@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:theme/theme.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({
@@ -13,30 +14,35 @@ class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Positioned(
-            child: Container(
-              child: _buildInputForm(),
+      body: Center(
+        child: Card(
+          margin: EdgeInsets.only(
+            left: context.widthScreen * 0.1,
+            right: context.widthScreen * 0.1,
+          ),
+          child: Padding(
+            padding: EdgeInsets.all(
+              context.spacing,
             ),
-          )
-        ],
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  height: 200,
+                  width: 200,
+                  color: context.red,
+                ),
+                TextField(),
+                SizedBox(
+                  width: context.spacingS,
+                  height: context.spacingS,
+                ),
+                TextField(),
+              ],
+            ),
+          ),
+        ),
       ),
     );
-  }
-
-  Widget _buildInputForm() {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        TextField(),
-        SizedBox(height: 8),
-        _buildInput(),
-      ],
-    );
-  }
-
-  Widget _buildInput() {
-    return TextField();
   }
 }
