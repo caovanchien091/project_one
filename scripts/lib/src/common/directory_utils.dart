@@ -44,7 +44,7 @@ class DirectoryUtils {
 
   static FutureOr folderChildren({
     required String folder,
-    required OnChildCallback onChild,
+    OnChildCallback? onChild,
     OnChildCallback? onDirection,
   }) async {
     var children = Directory(folder).listSync();
@@ -53,10 +53,10 @@ class DirectoryUtils {
         if (child is Directory) {
           await onDirection(child.path);
         } else {
-          await onChild(child.path);
+          await onChild?.call(child.path);
         }
       } else {
-        await onChild(child.path);
+        await onChild?.call(child.path);
       }
     }
   }

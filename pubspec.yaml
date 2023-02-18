@@ -8,12 +8,10 @@ dependencies:
   flutter:
     sdk: flutter
 
-  domain:
-    path: module/domain
+  source:
+    path: module/source
   common:
     path: module/common
-  content:
-    path: module/content
   theme:
     path: module/theme
   widget:

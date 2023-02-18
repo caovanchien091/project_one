@@ -15,10 +15,10 @@
       <excludeFolder url="file://$MODULE_DIR$/.flutter-plugins" />
       <excludeFolder url="file://$MODULE_DIR$/.flutter-plugins-dependencies" />
       <excludeFolder url="file://$MODULE_DIR$/module/content/.flutter-plugins-dependencies" />
-      <excludeFolder url="file://$MODULE_DIR$/module/domain/.flutter-plugins-dependencies" />
+      <excludeFolder url="file://$MODULE_DIR$/module/source/.flutter-plugins-dependencies" />
       <excludeFolder url="file://$MODULE_DIR$/module/widget/.flutter-plugins" />
       <excludeFolder url="file://$MODULE_DIR$/module/content/.flutter-plugins" />
-      <excludeFolder url="file://$MODULE_DIR$/module/domain/.flutter-plugins" />
+      <excludeFolder url="file://$MODULE_DIR$/module/source/.flutter-plugins" />
       <excludeFolder url="file://$MODULE_DIR$/module/common/.flutter-plugins-dependencies" />
       <excludeFolder url="file://$MODULE_DIR$/module/data/.flutter-plugins-dependencies" />
       <excludeFolder url="file://$MODULE_DIR$/module/theme/.flutter-plugins-dependencies" />
@@ -32,7 +32,7 @@
       <excludeFolder url="file://$MODULE_DIR$/module/theme/.metadata" />
       <excludeFolder url="file://$MODULE_DIR$/module/widget/.metadata" />
       <excludeFolder url="file://$MODULE_DIR$/module/common/.metadata" />
-      <excludeFolder url="file://$MODULE_DIR$/module/domain/.metadata" />
+      <excludeFolder url="file://$MODULE_DIR$/module/source/.metadata" />
       <excludeFolder url="file://$MODULE_DIR$/module/theme/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/module/theme/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/module/theme/build" />
@@ -51,9 +51,9 @@
       <excludeFolder url="file://$MODULE_DIR$/module/widget/build" />
       <excludeFolder url="file://$MODULE_DIR$/module/widget/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/module/widget/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/module/domain/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/module/domain/build" />
-      <excludeFolder url="file://$MODULE_DIR$/module/domain/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/module/source/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/module/source/build" />
+      <excludeFolder url="file://$MODULE_DIR$/module/source/.dart_tool" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

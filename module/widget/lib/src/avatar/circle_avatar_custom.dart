@@ -4,12 +4,6 @@ import 'package:theme/theme.dart';
 const int _numChar = 1;
 
 class CircleAvatarCustom extends StatelessWidget {
-  final double size;
-  final double borderWidth;
-  final String? name;
-  final String? iconPath;
-  final String? iconUrl;
-
   const CircleAvatarCustom({
     Key? key,
     this.name,
@@ -18,6 +12,12 @@ class CircleAvatarCustom extends StatelessWidget {
     this.size = 64,
     this.borderWidth = 2,
   }) : super(key: key);
+
+  final double size;
+  final double borderWidth;
+  final String? name;
+  final String? iconPath;
+  final String? iconUrl;
 
   @override
   Widget build(BuildContext context) {

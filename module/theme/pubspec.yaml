@@ -16,6 +16,9 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
+  assets:
+    - assets/icons/error/
+    - assets/images/error/
   fonts:
     - family: InterFont
       fonts:

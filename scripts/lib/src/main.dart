@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:scripts/scripts.dart';
-import 'command/run_command.dart';
 
 void main() async {
   await runPubGet();
@@ -22,7 +21,10 @@ FutureOr runPubGet([bool isModule = true]) async {
   if (isModule) {
     DirectoryUtils.folderChildren(
       folder: DirectoryUtils.rootPath() + '/module',
-      onChild: (path) async {
+      onDirection: (path) async {
+        print('');
+        print("On ==========> $path");
+        print('');
         await RunCommand.runs(
           path: path,
           commands: commands,

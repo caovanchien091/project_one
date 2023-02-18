@@ -17,17 +17,7 @@ class AppRoute extends RouteRegister {
   Route? register(settings, injection) {
     switch (settings.name) {
       case authSingIn:
-        return PageRouteCustom(
-          blocs: [],
-          settings: settings,
-          child: const SignInScreen(),
-        );
       case authSingUp:
-        return PageRouteCustom(
-          blocs: [],
-          settings: settings,
-          child: const SignUpScreen(),
-        );
     }
   }
 }
