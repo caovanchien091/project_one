@@ -10,3 +10,5 @@ typedef Predicate<T> = bool Function(T value);
 typedef GenerateRoute = Route? Function(RouteSettings settings);
 
 typedef InitRoute = String Function(Injection);
+
+typedef RunApp = void Function(Widget app);
