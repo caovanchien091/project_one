@@ -27,17 +27,17 @@ class _SignInScreenState extends State<SignInScreen> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: context.red,
+                ...List.generate(
+                  FontWeight.values.length,
+                  (index) => Text(
+                    'Chien O 0',
+                    style: TextStyle(
+                      package: 'theme',
+                      fontFamily: 'InterFont',
+                      fontWeight: FontWeight.values[index],
+                    ),
+                  ),
                 ),
-                TextField(),
-                SizedBox(
-                  width: context.spacingS,
-                  height: context.spacingS,
-                ),
-                TextField(),
               ],
             ),
           ),

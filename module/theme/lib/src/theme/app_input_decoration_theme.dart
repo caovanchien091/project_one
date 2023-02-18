@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:theme/src/constant/size/space_size.dart';
 import 'package:theme/src/constant/size/theme_size.dart';
 
 class AppInputDecorationTheme extends InputDecorationTheme {
@@ -77,5 +78,10 @@ class AppInputDecorationTheme extends InputDecorationTheme {
         width: ThemeSize.inputBorderWidth,
       ),
     );
+  }
+
+  @override
+  EdgeInsetsGeometry? get contentPadding {
+    return EdgeInsets.all(SpaceSize.spacingS);
   }
 }
